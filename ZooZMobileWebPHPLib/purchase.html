@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="cache-control" content="no-cache" />
+<title>Super Mario - Purchase</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.3.0.min.css" />
+<link rel="stylesheet" type="text/css" href="css/mario-style.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.3.0.min.js"></script>
+
+<!-- Include the ZooZ script that contains the zoozCheckout() function -->
+<script src="https://app.zooz.com/mobile/js/zooz-ext-web.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('#checkoutButton').click(function() {
+			$.ajax({
+				url: 'zooz.sample.php?cmd=openTrx', // A call to server side to initiate the payment process
+				dataType: 'text',
+				success: function(response) {
+					eval(response);
+					var path = window.location.protocol + "//" + window.location.host;
+					
+					zoozStartCheckout({
+						token : data.token,
+						uniqueId : "com.zooz.mobileweb.sample",
+						isSandbox : true,
+						returnUrl : path + "/zooz.sample.php",
+						cancelUrl : path + "/zooz.sample.php"
+						
+					});
+				}
+			});
+			
+		});
+				
+	});
+	
+	</script>
+</head>
+
+<body>
+	<div data-role="page" data-theme="b">
+		<div data-role="content" data-contnet-theme="b">
+
+			<table id="wrapper">
+				<tr>
+					<td><h3>Buy 50 mushrooms only for $0.99!</h3></td>
+				</tr>
+
+				<tr>
+					<td><img alt="Super Mario" src="img/mario.png" /></td>
+				</tr>
+			</table>
+			<button id="checkoutButton">Buy more mushrooms...</button>
+		</div>
+	</div>
+
+</body>
+</html>
