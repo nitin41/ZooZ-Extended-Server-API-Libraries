@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.zooz.extended.java.lib.utils.ZooZJSONUtils;
@@ -14,7 +15,7 @@ public class Invoice {
 	private List<InvoiceItem> invoiceItems;
 	private String additionalDetails;
 	
-	public Invoice(JSONObject jsonObject) {
+	public Invoice(JSONObject jsonObject) throws JSONException {
 		this.invoiceItems = new ArrayList<InvoiceItem>();
 		if (!jsonObject.isNull("items")) {
 			JSONArray invoiceItemsArray = jsonObject.getJSONArray("items");

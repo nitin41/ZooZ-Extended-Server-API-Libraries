@@ -84,7 +84,12 @@ public class ZooZExtendedServerAPI {
 		
 		JSONObject responseObj = postToZooZ(nvps.toString());
 		
-		return new TransactionDetails(responseObj);
+		try {
+			return new TransactionDetails(responseObj);
+		} catch (JSONException e) {
+			throw new ZooZException(e);
+		}
+		
 	}
 	
 	/**
@@ -107,15 +112,20 @@ public class ZooZExtendedServerAPI {
 		
 		JSONObject responseObj = postToZooZ(nvps.toString());
 		
-		ArrayList<TransactionDetails> transactionDetailsArr = new ArrayList<TransactionDetails>();
-			if (responseObj != null && !responseObj.isNull("payments")) {
-				JSONArray paymentsJsonArray = responseObj.getJSONArray("payments");
-				for (int i = 0; i < paymentsJsonArray.length(); i++) {
-					JSONObject paymentJson = paymentsJsonArray.getJSONObject(i);
-					transactionDetailsArr.add(new TransactionDetails(paymentJson));
+		try {
+
+			ArrayList<TransactionDetails> transactionDetailsArr = new ArrayList<TransactionDetails>();
+				if (responseObj != null && !responseObj.isNull("payments")) {
+					JSONArray paymentsJsonArray = responseObj.getJSONArray("payments");
+					for (int i = 0; i < paymentsJsonArray.length(); i++) {
+						JSONObject paymentJson = paymentsJsonArray.getJSONObject(i);
+						transactionDetailsArr.add(new TransactionDetails(paymentJson));
+					}
 				}
-			}
-		return transactionDetailsArr;
+			return transactionDetailsArr;
+		} catch (JSONException e) {
+			throw new ZooZException(e);
+		}
 	}
 	
 	/**
@@ -142,7 +152,12 @@ public class ZooZExtendedServerAPI {
 		}
 		
 		JSONObject responseObj = postToZooZ(nvps.toString());
-		return responseObj.getBoolean("boolean");
+		try {
+			return responseObj.getBoolean("boolean");
+		} catch (JSONException e) {
+			throw new ZooZException(e);
+		}
+		
 	}
 	
 	/**
@@ -169,7 +184,12 @@ public class ZooZExtendedServerAPI {
 		}
 		
 		JSONObject responseObj = postToZooZ(nvps.toString());
-		return responseObj.getBoolean("boolean");
+		try {
+			return responseObj.getBoolean("boolean");
+		} catch (JSONException e) {
+			throw new ZooZException(e);
+		}
+		
 	}
 	
 	
@@ -235,7 +255,7 @@ public class ZooZExtendedServerAPI {
 			
 			return responseObjectJson;
 		} catch (JSONException e) {
-			throw new ZooZException(e);
+			throw new ZooZException(res);
 		}
 		
 	}

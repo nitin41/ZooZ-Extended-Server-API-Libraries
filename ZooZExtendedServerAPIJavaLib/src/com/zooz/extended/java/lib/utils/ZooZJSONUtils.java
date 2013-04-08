@@ -8,7 +8,7 @@ import org.json.JSONObject;
 public class ZooZJSONUtils {
 	
 	
-	public static String getDecodedString(JSONObject jsonObject, String key) {
+	public static String getDecodedString(JSONObject jsonObject, String key) throws JSONException {
 		try {
 			return URLDecoder.decode(getString(jsonObject, key), "UTF-8");
 		} catch (Exception e) {
@@ -17,7 +17,7 @@ public class ZooZJSONUtils {
 		return null;
 	}
 	
-	public static String getString(JSONObject jsonObject, String key) {
+	public static String getString(JSONObject jsonObject, String key) throws JSONException {
 		if (!jsonObject.isNull(key)) {
 			return jsonObject.getString(key);
 		}

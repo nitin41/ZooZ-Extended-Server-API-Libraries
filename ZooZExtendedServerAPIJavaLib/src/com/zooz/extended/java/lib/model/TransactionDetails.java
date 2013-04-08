@@ -2,8 +2,10 @@ package com.zooz.extended.java.lib.model;
 
 import java.util.Date;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.zooz.extended.java.lib.exception.ZooZException;
 import com.zooz.extended.java.lib.model.Address.AddressType;
 import com.zooz.extended.java.lib.utils.ZooZJSONUtils;
 
@@ -33,7 +35,7 @@ public class TransactionDetails {
 	private Address billingAddress;
 	private Address shippingAddress;
 	
-	public TransactionDetails(JSONObject jsonObject) {
+	public TransactionDetails(JSONObject jsonObject) throws JSONException {
 		this.amount = ZooZJSONUtils.getDouble(jsonObject, "amount");
 		this.appName = ZooZJSONUtils.getDecodedString(jsonObject, "appName");
 		JSONObject addressesJson = ZooZJSONUtils.getJSONObject(jsonObject, "addresses");

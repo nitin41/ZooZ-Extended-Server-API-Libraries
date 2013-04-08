@@ -1,5 +1,6 @@
 package com.zooz.extended.java.lib.model;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.zooz.extended.java.lib.utils.ZooZJSONUtils;
@@ -14,7 +15,7 @@ public class InvoiceItem {
 	private String additionalDetails;
 	
 	
-	public InvoiceItem(JSONObject jsonObject) {
+	public InvoiceItem(JSONObject jsonObject) throws JSONException {
 		this.name = ZooZJSONUtils.getDecodedString(jsonObject, "name");
 		this.id = ZooZJSONUtils.getString(jsonObject, "id");
 		this.quantity = ZooZJSONUtils.getDouble(jsonObject, "quantity");

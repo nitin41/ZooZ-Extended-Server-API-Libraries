@@ -1,5 +1,6 @@
 package com.zooz.extended.java.lib.model;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.zooz.extended.java.lib.utils.ZooZJSONUtils;
@@ -22,7 +23,7 @@ public class Address {
 	private String zipCode;
 	
 	
-	public Address(AddressType addressType, JSONObject jsonObject) {
+	public Address(AddressType addressType, JSONObject jsonObject) throws JSONException {
 		this.addressType = addressType;
 		
 		this.firstName = ZooZJSONUtils.getDecodedString(jsonObject, "firstName");
