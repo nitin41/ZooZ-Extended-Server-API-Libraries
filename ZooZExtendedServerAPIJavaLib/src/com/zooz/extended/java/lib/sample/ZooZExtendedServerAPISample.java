@@ -1,6 +1,7 @@
 package com.zooz.extended.java.lib.sample;
 
 import java.lang.reflect.Field;
+import java.util.Calendar;
 import java.util.List;
 
 import com.zooz.extended.java.lib.ZooZExtendedServerAPI;
@@ -29,7 +30,14 @@ public class ZooZExtendedServerAPISample {
 			
 			System.out.println("------------------------------------------------------");
 			
-			for (TransactionDetails trxDetails : zoozExtendedServerAPI.getTransactionDetailsByPayeeEmail("<payee@email.here>")) {
+
+			Calendar fromCal = Calendar.getInstance();
+			fromCal.set(2013, Calendar.APRIL, 3);
+			
+			Calendar toCal = Calendar.getInstance();
+			toCal.set(2013, Calendar.APRIL, 18);
+			
+			for (TransactionDetails trxDetails : zoozExtendedServerAPI.getTransactionDetailsByPayeeEmail("<payee@email.here>", fromCal.getTime(), toCal.getTime())) {
 				dumpObject(trxDetails);
 				System.out.println("-------");
 			}
@@ -40,7 +48,11 @@ public class ZooZExtendedServerAPISample {
 				System.out.println("Refund completed successfully");
 			}
 			
-			if (zoozExtendedServerAPI.commitTransaction("<transaction-ID>", null)) {
+			Invoice invoice = new Invoice();
+			invoice.setNumber("123456AAA");
+			invoice.addItem("item 1", "1233333", 1, 0.24, 0.1, "none");
+			
+			if (zoozExtendedServerAPI.commitTransaction("<transaction-ID>", null, invoice)) {
 				System.out.println("Commit completed successfully");
 			}
 			
