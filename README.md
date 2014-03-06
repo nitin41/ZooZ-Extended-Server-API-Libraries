@@ -36,7 +36,7 @@ Quick java example:
     GetTransactionDetailsByTransactionID sample = new GetTransactionDetailsByTransactionID(GET_TRANSACTION_ID);
     JSONObject result = sample.postToZooZ();
     
-    the result will be in a Json format, simmiler to this:
+the result will be in a Json format, simmiler to this:
     
     {
       "ResponseObject":
