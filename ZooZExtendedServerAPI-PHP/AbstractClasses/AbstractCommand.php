@@ -10,7 +10,7 @@ require_once './ZooZExtendedServerAPI.php';
 
 abstract class AbstractCommand {
 
-    const VERSION_NUMBER = "1.1.1";
+    const VERSION_NUMBER = "1.1.3";
     private $ch;
     
     protected $nvps;

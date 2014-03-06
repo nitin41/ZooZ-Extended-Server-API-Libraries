@@ -3,7 +3,7 @@ __author__ = 'Roy Keynan'
 import abc
 from abc import ABCMeta
 
-VERSION_NUMBER = "1.1.1"
+VERSION_NUMBER = "1.1.3"
 
 
 def backoff_retry(retries=1, delay=1, backoff=2):

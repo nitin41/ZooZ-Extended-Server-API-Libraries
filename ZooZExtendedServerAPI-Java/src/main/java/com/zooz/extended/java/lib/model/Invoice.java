@@ -58,7 +58,11 @@ public class Invoice {
 		this.additionalDetails = additionalDetails;
 	}
 
-	public String toJSONString() throws JSONException {
+    public void setInvoiceItems(List<InvoiceItem> invoiceItems) {
+        this.invoiceItems = invoiceItems;
+    }
+
+    public String toJSONString() throws JSONException {
 		JSONObject jsonObject = new JSONObject();
 		
 		jsonObject.put("number", number);

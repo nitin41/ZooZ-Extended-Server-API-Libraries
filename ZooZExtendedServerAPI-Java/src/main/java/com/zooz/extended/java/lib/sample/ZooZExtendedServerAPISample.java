@@ -5,10 +5,13 @@ import com.zooz.extended.java.lib.ZooZExtendedServerAPI;
 import com.zooz.extended.java.lib.ZooZQueryTypes.*;
 import com.zooz.extended.java.lib.exception.ZooZException;
 import com.zooz.extended.java.lib.model.Invoice;
+import com.zooz.extended.java.lib.model.InvoiceItem;
 import com.zooz.extended.java.lib.model.QueryType;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -18,7 +18,7 @@ import java.net.URL;
  */
 public abstract class AbstractCommand {
 
-    private static final String VERSION_NUMBER = "1.1.1";
+    private static final String VERSION_NUMBER = "1.1.3";
     private JSONObject responseFromZooZ = null;
     protected NVPs nvps = new NVPs();
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +15,7 @@ namespace AbstractClasses
     abstract class AbstractCommand
     {
         private JObject result;
-        private readonly string VERSION_NUMBER = "1.1.1";
+        private readonly string VERSION_NUMBER = "1.1.3";
         private List<KeyValuePair<string, Object>> kvp = new List<KeyValuePair<string, Object>>();
         public string pattern { get { return "yyyy-MM-dd"; } }
             
