@@ -1,8 +1,6 @@
 ZooZ-Extended-Server-API-Libraries
 ==================================
 
-ZooZ Extended Server API Libraries
-
 ZooZ Extended server API allows you to extend your control and manageability of your payment transactions. 
 With the Extended Server API you can: 
   1. Defer payments -­‐ approve your users’ purchases after they authorize ZooZ transactions
@@ -13,7 +11,7 @@ it will be necessary for you to sign up for ZooZ at http://www.ZooZ.com
 The purpose of this guide is to provide you with all necessary information for integration, 
 however if you have any questions, please feel free to contact us at support@ZooZ.com 
 
-Version The version of this API is: 1.1.1 
+Version The version of this API is: 1.1.3 
 Notice: Please make sure to pass this version number to the API. 
 
 To Get Started with ZooZ:
