@@ -22,7 +22,7 @@ To Get Started with ZooZ:
 2. Integrate the ZooZ SDK in your App 
 3. Generate transactions using ZooZ SDK 
 
-Quick java example:
+Quick java example for one our API's , all other APIs' are simillar to this:
 
     private static final String DEVELOPER_ID = "developer@email.here";   // fill in your ZooZ Developer Id
     private static final String API_KEY = "api-key.here";                // can be found in My Account-> Server API Key.
@@ -31,12 +31,12 @@ Quick java example:
     ZooZExtendedServerAPI.init(DEVELOPER_ID, API_KEY, IS_SANDBOX);       // set-up a connection to ZooZ servers
     
     String GET_TRANSACTION_ID = "7JU3VMGBXC4XJE343ASWF3W6C4";            // fill the transaaction id you like to get it result.
-                                                                                can be found in Reports->Transaction Details->Transaction ID
+                                                                         // can be found in Reports->Transaction Details->Transaction ID
     
     GetTransactionDetailsByTransactionID sample = new GetTransactionDetailsByTransactionID(GET_TRANSACTION_ID);
     JSONObject result = sample.postToZooZ();
     
-the result will be in a Json format, simmiler to this:
+The result will be in a Json format, similler to this:
     
     {
       "ResponseObject":
