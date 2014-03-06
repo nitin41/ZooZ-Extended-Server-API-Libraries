@@ -1,0 +1,9 @@
+Mar 4, 2014 1:47:46 PM com.zooz.extended.java.lib.sample.ZooZExtendedServerAPISample main
+INFO: Initialize Extended Server API For: 
+ Developer id: aroy@zooz.com
+ API Key: 6AWQ2XZZNXX2SCLGJAIF23FUOY
+ Sandbox Mode: false
+Mar 4, 2014 1:47:46 PM com.zooz.extended.java.lib.sample.ZooZExtendedServerAPISample main
+INFO: // -------------------------------
+Mar 4, 2014 1:47:46 PM com.zooz.extended.java.lib.sample.ZooZExtendedServerAPISample main
+INFO:  GetTransactionDetailsByTransactionID: 

@@ -1,0 +1,56 @@
+10
+
+dir
+7874
+svn://svn.zooz.co/TactusServer/Plugins/trunk/ExtendedServerAPI/C%23/packages/Newtonsoft.Json.6.0.1/lib
+svn://svn.zooz.co/TactusServer
+
+
+
+2014-03-04T14:24:39.304360Z
+7874
+roy
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+e3d70bce-af79-4b64-93f7-2a302464b1d8
+
+
+
+
+
+
+0
+
+net20
+dir
+
+net35
+dir
+
+net40
+dir
+
+net45
+dir
+
+netcore45
+dir
+
+portable-net40+sl5+wp80+win8+monotouch+monoandroid
+dir
+
+portable-net45+wp80+win8
+dir
+

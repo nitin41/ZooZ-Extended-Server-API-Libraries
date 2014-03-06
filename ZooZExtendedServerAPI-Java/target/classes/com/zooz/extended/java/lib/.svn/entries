@@ -1,0 +1,93 @@
+10
+
+dir
+7874
+svn://svn.zooz.co/TactusServer/Plugins/trunk/ExtendedServerAPI/Java/target/classes/com/zooz/extended/java/lib
+svn://svn.zooz.co/TactusServer
+
+
+
+2014-03-04T14:24:39.304360Z
+7874
+roy
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+e3d70bce-af79-4b64-93f7-2a302464b1d8
+
+
+
+
+
+
+0
+
+AbstractClasses
+dir
+
+ZooZExtendedServerAPI.class
+file
+
+
+
+
+2014-03-04T11:45:56.000000Z
+3c7eaede9b05f232056c9981d04a41df
+2014-03-04T14:24:39.304360Z
+7874
+roy
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1480
+
+ZooZQueryTypes
+dir
+
+abstractCommands
+dir
+
+commands
+dir
+
+exception
+dir
+
+model
+dir
+
+sample
+dir
+
+utils
+dir
+

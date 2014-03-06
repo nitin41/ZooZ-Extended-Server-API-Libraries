@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zooz.extendedServerAPI</groupId>
+    <artifactId>JavaLib</artifactId>
+    <name>Extended Server API</name>
+    <description>
+        ZooZ Extended server API allows you to extend your control and manageability of your payment
+        transactions.
+        With the Extended Server API you can:
+        1. Defer payments -­‐approve your users’ purchases after they authorize ZooZ transactions
+        2. Get full details on transactions by transaction ID or payee email address.
+        3. Refund transactions Prior to initiating any forms of integration, it will be necessary for you to sign up for
+        ZooZ at http://www.ZooZ.com
+        The purpose of this guide is to provide you with all necessary information for integration, however if you have
+        any questions, please feel free to contact us at support@ZooZ.com
+    </description>
+    <version>1.1.2.0</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20140107</version>
+        </dependency>
+    </dependencies>
+</project>
