@@ -4,7 +4,7 @@
  *
  * @author Roy Keynan
  */
-#include_once 'lib/nvps.php';
+
 require_once 'lib/nvps.php';
 require_once './ZooZExtendedServerAPI.php';
 
