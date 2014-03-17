@@ -35,7 +35,7 @@ abstract class AbstractCommand {
 	curl_setopt($this->ch, CURLOPT_POST, true);
         
         return $this->postToZooZ($this->nvps->toString());
-        //return $responseObj;
+        
     }
     
     private function postToZooZ($data) {
