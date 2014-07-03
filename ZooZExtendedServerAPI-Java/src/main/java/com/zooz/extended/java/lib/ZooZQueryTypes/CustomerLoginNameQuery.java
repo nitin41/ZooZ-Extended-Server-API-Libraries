@@ -20,7 +20,7 @@ public class CustomerLoginNameQuery extends QueryType {
 
     @Override
     protected void addQueryParametersToNVP(NVPs nvps) {
-        nvps.add("customrLoginName", customerLoginName);
+        nvps.add("customerLoginName", customerLoginName);
     }
 
     @Override
