@@ -28,7 +28,8 @@ abstract class AbstractCommand {
             'ZooZDeveloperId: ' . ZooZExtendedServerAPI::$developerId,
             'ZooZServerAPIKey: ' . urlencode((string)ZooZExtendedServerAPI::$apiKey),
             ) );
-              
+        
+        curl_setopt($this->ch, CURLOPT_SSL_VERIFYPEER, 0); // only for sandbox (!)
         curl_setopt($this->ch, CURLOPT_URL, ZooZExtendedServerAPI::$zoozServer);
 	curl_setopt($this->ch, CURLOPT_TIMEOUT, 30 );
 	curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
