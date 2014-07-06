@@ -11,7 +11,7 @@ it will be necessary for you to sign up for ZooZ at http://www.ZooZ.com
 The purpose of this guide is to provide you with all necessary information for integration, 
 however if you have any questions, please feel free to contact us at support@ZooZ.com 
 
-Version The version of this API is: 1.1.3 
+Version The version of this API is: 1.1.8 
 Notice: Please make sure to pass this version number to the API. 
 
 To Get Started with ZooZ:
