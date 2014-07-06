@@ -10,7 +10,7 @@ require_once './ZooZExtendedServerAPI.php';
 
 abstract class AbstractCommand {
 
-    const VERSION_NUMBER = "1.1.3";
+    const VERSION_NUMBER = "1.1.8";
     private $ch;
     
     protected $nvps;
@@ -35,7 +35,6 @@ abstract class AbstractCommand {
 	curl_setopt($this->ch, CURLOPT_POST, true);
         
         return $this->postToZooZ($this->nvps->toString());
-        //return $responseObj;
     }
     
     private function postToZooZ($data) {
@@ -43,49 +42,12 @@ abstract class AbstractCommand {
     curl_setopt($this->ch, CURLOPT_POSTFIELDS, $data);
     $chResult = curl_exec($this->ch);
     $chResult_trim = trim($chResult, "\n");
-//    $errorMsg = "Error communicating with ZooZ server, please check your network connection";
-//    $errorCode = -1;
-//    if (empty($chResult)) {
-//        throw new ZooZException($errorMsg);
-//    }
-			
-//    $decoded = json_decode(trim($chResult_trim), TRUE); 
-    
-    //return $decoded['ResponseObject'];
     return trim($chResult_trim);
     
-//    if ($decoded['ResponseStatus'] != 0) {
-//        if (!empty($decoded[ResponseObject]) && !empty($decoded['ResponseObject']['errorMessage'])) {
-//            $errorMsg = $decoded[ResponseObject][errorMessage];
-//            $errorCode = $decoded['ResponseStatus'];
-//           }
-//				throw new ZooZException($errorMsg, $errorCode);
-//			}
-//			
-//			return $decoded['ResponseObject'];
-//				
-//		}
     }
     
     function getNvps(){
         return $this->nvps->toString();
     }
 
-//class Child extends AbsreactCommand {
-//    function __construct($transactionID) {
-//        parent::__construct();
-//        $this->nvps->add("transactionID", $transactionID);
-//        
-//    }
-//    
-//    function dump()
-//    {
-//        print $this->nvps->toString();
-//    }
-//
-//    protected function getCommand() {
-//        return "getTransaction";
-//    }
-//
-//
 }
