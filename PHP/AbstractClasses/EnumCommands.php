@@ -14,10 +14,8 @@ abstract class EnumCommands {
     const getSubscriptionDetails = "getSubscriptionDetails";
     const checkSubscription = "checkSubscription";
     const cancelSubscription = "cancelSubscription";
-    const getTransactionDetailsByPayerEmail =
-            "getTransactionDetailsByPayerEmail";
-    const getTransactionDetailsByParameters = 
-            "getTransactionDetailsByParameters";
+    const getTransactionDetailsByPayerEmail = "getTransactionDetailsByPayerEmail";
+    const getTransactionDetailsByParameters = "getTransactionDetailsByParameters";
     const getTransactionDetailsByUserId = "getTransactionDetailsByUserId";
  
 }
