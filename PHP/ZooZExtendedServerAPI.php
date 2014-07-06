@@ -26,7 +26,8 @@ class ZooZExtendedServerAPI {
         self::$apiKey = $apiKey;
 
         if ($isSandbox) {
-            self::$zoozServer = ZooZExtendedServerAPI::SANDBOX_URL;
+            self::$zoozServer = $this->SANDBOX_URL;
+            curl_setopt($this->ch, CURLOPT_SSL_VERIFYPEER, 0);
         } else {
             self::$zoozServer = ZooZExtendedServerAPI::PRODUCTION_URL;
         }

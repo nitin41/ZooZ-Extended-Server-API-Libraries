@@ -5,7 +5,6 @@
  * @author Roy Keynan
  */
 #include_once 'lib/nvps.php';
-
 require_once 'lib/nvps.php';
 require_once './ZooZExtendedServerAPI.php';
 
@@ -30,8 +29,6 @@ abstract class AbstractCommand {
             'ZooZServerAPIKey: ' . urlencode((string)ZooZExtendedServerAPI::$apiKey),
             ) );
               
-        
-        curl_setopt($this->ch, CURLOPT_SSL_VERIFYPEER, 0); 
         curl_setopt($this->ch, CURLOPT_URL, ZooZExtendedServerAPI::$zoozServer);
 	curl_setopt($this->ch, CURLOPT_TIMEOUT, 30 );
 	curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
@@ -39,7 +36,6 @@ abstract class AbstractCommand {
         
         return $this->postToZooZ($this->nvps->toString());
         //return $responseObj;
-        
     }
     
     private function postToZooZ($data) {
@@ -56,7 +52,6 @@ abstract class AbstractCommand {
 //    $decoded = json_decode(trim($chResult_trim), TRUE); 
     
     //return $decoded['ResponseObject'];
-
     return trim($chResult_trim);
     
 //    if ($decoded['ResponseStatus'] != 0) {
